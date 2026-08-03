@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executive Roadmap — Aug 2026 to Jan 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E9EDF2;
+  --card:#FFFFFF;
+  --ink:#131A24;
+  --muted:#5A6A7E;
+  --rule:#C9D2DD;
+  --t1:#6D3BB5;
+  --t1-soft:#F2ECFB;
+  --t2:#0B6E7F;
+  --t2-soft:#E6F2F4;
+  --exam:#B72B45;
+  --exam-soft:#FBEBEE;
+  --gold:#8C6210;
+  --gold-soft:#FAF1DE;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px 96px;}
+
+/* ---------- masthead ---------- */
+.mast{
+  background:var(--ink);
+  color:#EDF1F6;
+  padding:48px 0 40px;
+  margin-bottom:36px;
+  border-bottom:5px solid var(--gold);
+}
+.mast .wrap{padding-bottom:0;}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:#8FA3BA;margin:0 0 14px;
+}
+h1{
+  font-family:"Space Grotesk",sans-serif;
+  font-weight:700;font-size:clamp(30px,5.4vw,52px);
+  line-height:1.04;letter-spacing:-.02em;margin:0 0 18px;max-width:15ch;
+}
+h1 em{font-style:normal;color:#C9A75B;}
+.sub{color:#A9BACD;max-width:56ch;margin:0 0 30px;font-size:16px;}
+.stats{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid #2B3644;}
+.stat{padding:16px 30px 4px 0;margin-right:30px;border-right:1px solid #2B3644;}
+.stat:last-child{border-right:0;}
+.stat b{display:block;font-family:"Space Grotesk",sans-serif;font-size:26px;line-height:1;color:#fff;}
+.stat span{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8FA3BA;}
+
+/* ---------- callouts ---------- */
+.note{
+  background:var(--card);border:1px solid var(--rule);
+  border-left:5px solid var(--exam);
+  border-radius:3px;padding:20px 24px;margin:0 0 40px;
+}
+.note.caution{border-left-color:var(--gold);}
+.note h3{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--exam);margin:0 0 10px;
+}
+.note.caution h3{color:var(--gold);}
+.note ol,.note p{margin:0 0 8px;}
+.note ol{padding-left:20px;}
+.note li{margin-bottom:7px;}
+.note li:last-child,.note p:last-child{margin-bottom:0;}
+code{
+  font-family:"IBM Plex Mono",monospace;font-size:.87em;
+  background:#E4E9F0;padding:1px 5px;border-radius:2px;
+}
+
+/* ---------- section headers ---------- */
+h2{
+  font-family:"Space Grotesk",sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--muted);
+  margin:56px 0 22px;padding-bottom:9px;border-bottom:2px solid var(--ink);
+}
+
+/* ---------- month band ---------- */
+.month{margin-bottom:14px;}
+.month-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:34px 0 4px;}
+.month-num{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+  letter-spacing:.14em;color:var(--muted);
+}
+.month-head h3{
+  font-family:"Space Grotesk",sans-serif;font-size:23px;font-weight:700;
+  letter-spacing:-.01em;margin:0;
+}
+.month-obj{color:var(--muted);font-size:14px;margin:0 0 18px;max-width:70ch;}
+
+/* ---------- the spine ---------- */
+.spine{position:relative;}
+.spine::before{
+  content:"";position:absolute;left:calc(50% - 1px);top:0;bottom:0;
+  width:2px;background:var(--rule);
+}
+.wk{
+  position:relative;display:grid;
+  grid-template-columns:1fr 96px 1fr;
+  align-items:stretch;margin-bottom:10px;
+}
+.hinge{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  position:relative;z-index:2;
+}
+.hinge b{
+  font-family:"Space Grotesk",sans-serif;font-size:14px;font-weight:700;
+  background:var(--ink);color:#fff;width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.hinge span{
+  font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted);
+  margin-top:6px;text-align:center;line-height:1.3;
+}
+.cell{
+  background:var(--card);border:1px solid var(--rule);border-radius:3px;
+  padding:13px 16px;font-size:13.5px;
+}
+.cell .tag{
+  display:block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px;
+}
+.cell.left{border-left:4px solid var(--t1);margin-right:14px;}
+.cell.left .tag{color:var(--t1);}
+.cell.right{border-left:4px solid var(--t2);margin-left:14px;}
+.cell.right .tag{color:var(--t2);}
+.cell.exam{background:var(--exam-soft);border-color:#EBC3CB;border-left-color:var(--exam);}
+.cell.exam .tag{color:var(--exam);}
+.cell.exam strong{color:var(--exam);}
+.wk.is-exam .hinge b{background:var(--exam);}
+
+/* milestone bar */
+.milestone{
+  display:flex;align-items:center;gap:12px;
+  background:var(--gold-soft);border:1px solid #E4D2AC;border-radius:3px;
+  padding:10px 18px;margin:4px 0 8px;
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600;
+}
+.milestone::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none;}
+
+/* ---------- tables ---------- */
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:13.5px;
+  border:1px solid var(--rule);border-radius:3px;overflow:hidden;}
+th{
+  background:var(--ink);color:#DCE4EE;text-align:left;padding:11px 14px;
+  font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:400;
+}
+td{padding:11px 14px;border-top:1px solid var(--rule);vertical-align:top;}
+td.mono{font-family:"IBM Plex Mono",monospace;font-size:12.5px;}
+tbody tr:nth-child(even){background:#F6F8FA;}
+.pill{
+  display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10px;
+  letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:2px;
+}
+.pill.open{background:#E4E9F0;color:var(--muted);}
+.pill.aws{background:var(--t2-soft);color:var(--t2);}
+.pill.cncf{background:var(--t1-soft);color:var(--t1);}
+
+/* ---------- rules cards ---------- */
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+.rule{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:20px 22px;}
+.rule .n{
+  font-family:"Space Grotesk",sans-serif;font-size:34px;font-weight:700;
+  color:var(--rule);line-height:1;display:block;margin-bottom:6px;
+}
+.rule h4{font-family:"Space Grotesk",sans-serif;font-size:16px;margin:0 0 8px;}
+.rule p{margin:0;font-size:13.5px;color:var(--muted);}
+pre{
+  background:var(--ink);color:#CFE3E7;padding:14px 16px;border-radius:3px;
+  font-family:"IBM Plex Mono",monospace;font-size:12px;overflow-x:auto;margin:12px 0 0;
+}
+pre .c{color:#7E93A8;}
+
+/* ---------- gates ---------- */
+.gates{list-style:none;padding:0;margin:0;}
+.gates li{
+  background:var(--card);border:1px solid var(--rule);border-radius:3px;
+  padding:13px 16px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start;
+  font-size:14px;
+}
+.gates input{margin-top:3px;width:16px;height:16px;accent-color:var(--t2);flex:none;cursor:pointer;}
+.gates li.key{border-left:4px solid var(--exam);}
+.gates label{cursor:pointer;}
+
+footer{
+  margin-top:60px;padding-top:20px;border-top:1px solid var(--rule);
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+}
+button.print{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;background:var(--ink);color:#fff;border:0;
+  padding:9px 16px;border-radius:2px;cursor:pointer;
+}
+button.print:hover{background:var(--t2);}
+:focus-visible{outline:3px solid var(--t1);outline-offset:2px;}
+
+@media (max-width:760px){
+  .spine::before{left:19px;}
+  .wk{grid-template-columns:44px 1fr;gap:0 10px;}
+  .hinge{grid-row:1/3;align-items:flex-start;justify-content:flex-start;}
+  .hinge b{width:34px;height:34px;font-size:12.5px;}
+  .hinge span{display:none;}
+  .cell.left{margin:0 0 8px;}
+  .cell.right{margin:0 0 8px;}
+  .stat{border-right:0;padding-right:0;}
+}
+@media print{
+  body{background:#fff;font-size:11px;}
+  .mast{background:#fff;color:#000;border-bottom:3px solid #000;padding:0 0 18px;}
+  h1,.stat b{color:#000;}
+  .sub,.eyebrow,.stat span{color:#444;}
+  .stats,.stat{border-color:#bbb;}
+  button.print{display:none;}
+  .month-head{break-after:avoid;}
+  .wk{break-inside:avoid;}
+  th{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <p class="eyebrow">02 Aug 2026 — 30 Jan 2027 · Week 1 of 26</p>
+    <h1>Seven exams,<br>two tracks,<br><em>one deadline.</em></h1>
+    <p class="sub">Certification campaign and interview preparation running in parallel. Track 1 buys the interview. Track 2 buys the credential. Neither works alone.</p>
+    <div class="stats">
+      <div class="stat"><b>26</b><span>Weeks</span></div>
+      <div class="stat"><b>7</b><span>Exams</span></div>
+      <div class="stat"><b>17</b><span>Hrs / week</span></div>
+      <div class="stat"><b>2</b><span>Parallel tracks</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="note">
+    <h3>Corrections to the original plan</h3>
+    <ol>
+      <li><strong>The DevOps Pro exam code is <code>DOP-C02</code>, not DOP-C01.</strong> DOP-C01 is retired — a course built on it teaches a dead blueprint.</li>
+      <li><strong>CKA + CKAD + CKS does not make you a Kubestronaut.</strong> CNCF requires five simultaneously-active certifications: KCNA, KCSA, CKA, CKAD, CKS. The two associate exams are scheduled in Weeks 24–25.</li>
+      <li><strong>The SA Pro hours don't add up.</strong> Five weeks at 7 hrs of Track 2 gives 35 hours; realistic prep is 60–80. August weekends go entirely to Track 2 to close the gap — or the exam moves to Week 7.</li>
+    </ol>
+  </div>
+
+  <h2>Week 1 gates</h2>
+  <ul class="gates">
+    <li class="key"><input type="checkbox" id="g1"><label for="g1"><strong>Book SAP-C02 for a date in Week 5 (30 Aug – 05 Sep).</strong> An unbooked exam has no deadline, and a plan without a deadline is a wish. Highest-leverage action on this page.</label></li>
+    <li><input type="checkbox" id="g2"><label for="g2">Buy the Tutorials Dojo SAP-C02 practice set — needed from Week 4.</label></li>
+    <li><input type="checkbox" id="g3"><label for="g3">Confirm Adrian Cantrill SAP-C02 course access.</label></li>
+    <li><input type="checkbox" id="g4"><label for="g4">Pick one LeetCode language and never switch. Python unless your targets screen in Java.</label></li>
+    <li class="key"><input type="checkbox" id="g5"><label for="g5"><strong>Set up the single-monitor split layout</strong> — terminal left, Kubernetes docs right. This is the specific thing that cost you the CKA last time.</label></li>
+    <li><input type="checkbox" id="g6"><label for="g6">Note that killer.sh sessions come free with CNCF exam registration and last 36 hours each. Don't burn them early.</label></li>
+  </ul>
+
+  <h2>The 26-week spine</h2>
+
+  <!-- MONTH 1 -->
+  <div class="month-head"><span class="month-num">MONTH 01</span><h3>August 2026 — AWS SA Pro Sprint</h3></div>
+  <p class="month-obj">Multi-account frameworks, hybrid networking, HA/DR architecture. Weekend surge hours go entirely to Track 2 this month.</p>
+  <div class="spine">
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1 · Coding &amp; Design</span>Arrays &amp; Hashing + TinyURL architecture</div>
+      <div class="hinge"><b>01</b><span>Aug 02<br>Aug 08</span></div>
+      <div class="cell right"><span class="tag">Track 2 · Cloud / CNCF</span>AWS Organizations, SCPs, Control Tower</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Two Pointers + Rate Limiter (token &amp; leaky bucket)</div>
+      <div class="hinge"><b>02</b><span>Aug 09<br>Aug 15</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>VPC Peering, Transit Gateway, Direct Connect</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Sliding Window + Distributed Chat System</div>
+      <div class="hinge"><b>03</b><span>Aug 16<br>Aug 22</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Route 53 policies, CloudFront, Multi-Region DR</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Stack problems + Distributed ID Generator</div>
+      <div class="hinge"><b>04</b><span>Aug 23<br>Aug 29</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Tutorials Dojo full mocks + wrong-answer autopsy</div>
+    </div>
+    <div class="wk is-exam">
+      <div class="cell left"><span class="tag">Track 1</span>Review weak patterns + Video Streaming design</div>
+      <div class="hinge"><b>05</b><span>Aug 30<br>Sep 05</span></div>
+      <div class="cell right exam"><span class="tag">Exam window</span><strong>AWS Solutions Architect Professional — SAP-C02</strong></div>
+    </div>
+  </div>
+  <div class="milestone">Milestone · AWS Certified Solutions Architect – Professional</div>
+
+  <!-- MONTH 2 -->
+  <div class="month-head"><span class="month-num">MONTH 02</span><h3>September 2026 — DevOps Pro Bridge</h3></div>
+  <p class="month-obj">Roughly 60% conceptual overlap with SAP-C02. That overlap decays week by week — this is the one month that cannot slip.</p>
+  <div class="spine">
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Linked Lists + Consistent Hashing</div>
+      <div class="hinge"><b>06</b><span>Sep 06<br>Sep 12</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Multi-account CodePipeline, Blue/Green + Canary</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Binary Search + Distributed Cache (Redis)</div>
+      <div class="hinge"><b>07</b><span>Sep 13<br>Sep 19</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Config rules, Inspector, SSM, Patch Manager</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Trees, DFS/BFS + Metrics Monitoring system</div>
+      <div class="hinge"><b>08</b><span>Sep 20<br>Sep 26</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>CloudFormation StackSets, drift detection, Service Catalog</div>
+    </div>
+    <div class="wk is-exam">
+      <div class="cell left"><span class="tag">Track 1</span>LeetCode Medium review + Distributed Message Queue</div>
+      <div class="hinge"><b>09</b><span>Sep 27<br>Oct 03</span></div>
+      <div class="cell right exam"><span class="tag">Exam window</span><strong>AWS DevOps Engineer Professional — DOP-C02</strong></div>
+    </div>
+  </div>
+  <div class="milestone">Milestone · AWS Certified DevOps Engineer – Professional</div>
+
+  <!-- MONTH 3 -->
+  <div class="month-head"><span class="month-num">MONTH 03</span><h3>October 2026 — CKA Redemption</h3></div>
+  <p class="month-obj">You didn't fail on architecture. You failed on clock management. Every drill this month is timed — if it isn't timed, it doesn't count.</p>
+  <div class="spine">
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Heap / Priority Queue + Web Crawler</div>
+      <div class="hinge"><b>10</b><span>Oct 04<br>Oct 10</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>K8s architecture, etcd backup/restore, kubeadm upgrades</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Tries + Typeahead suggestion design</div>
+      <div class="hinge"><b>11</b><span>Oct 11<br>Oct 17</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Networking, CNI plugins, Ingress, Gateway API</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Graphs + Distributed KV store</div>
+      <div class="hinge"><b>12</b><span>Oct 18<br>Oct 24</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Broken nodes, kubelet systemd failures, static pods</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Backtracking + API Gateway design</div>
+      <div class="hinge"><b>13</b><span>Oct 25<br>Oct 31</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>killer.sh drills — target &gt;80% inside 90 minutes</div>
+    </div>
+    <div class="wk is-exam">
+      <div class="cell left"><span class="tag">Track 1</span>System design trade-off review</div>
+      <div class="hinge"><b>14</b><span>Nov 01<br>Nov 07</span></div>
+      <div class="cell right exam"><span class="tag">Exam window</span><strong>Certified Kubernetes Administrator — CKA</strong></div>
+    </div>
+  </div>
+  <div class="milestone">Milestone · CKA — also the prerequisite gate for CKS</div>
+
+  <!-- MONTH 4 -->
+  <div class="month-head"><span class="month-num">MONTH 04</span><h3>November 2026 — CKAD Velocity Sprint</h3></div>
+  <p class="month-obj">The easiest exam in the loop, provided CKA muscle memory is still warm. Do not let this one drift.</p>
+  <div class="spine">
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Dynamic Programming intro + Notification System</div>
+      <div class="hinge"><b>15</b><span>Nov 08<br>Nov 14</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Multi-container pods, quotas and limits</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Greedy + Real-time Leaderboard</div>
+      <div class="hinge"><b>16</b><span>Nov 15<br>Nov 21</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>StorageClasses, PV/PVC, ConfigMaps, Secrets, probes</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Advanced DP + Geospatial ride-hailing design</div>
+      <div class="hinge"><b>17</b><span>Nov 22<br>Nov 28</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Imperative speed runs, Helm and Kustomize basics</div>
+    </div>
+    <div class="wk is-exam">
+      <div class="cell left"><span class="tag">Track 1</span>Mock interviews + Distributed File Storage</div>
+      <div class="hinge"><b>18</b><span>Nov 29<br>Dec 05</span></div>
+      <div class="cell right exam"><span class="tag">Exam window</span><strong>Certified Kubernetes Application Developer — CKAD</strong></div>
+    </div>
+  </div>
+  <div class="milestone">Milestone · CKAD</div>
+
+  <!-- MONTH 5 -->
+  <div class="month-head"><span class="month-num">MONTH 05</span><h3>December 2026 — CKS Security Hardening</h3></div>
+  <p class="month-obj">The credential that actually differentiates you for banking and fintech work. Requires an active CKA, which Week 14 delivers.</p>
+  <div class="spine">
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Advanced Graphs + Payment Gateway low-level design</div>
+      <div class="hinge"><b>19</b><span>Dec 06<br>Dec 12</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Cluster hardening, CIS benchmarks, securing kube-apiserver</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Bit Manipulation + Checkout concurrency models</div>
+      <div class="hinge"><b>20</b><span>Dec 13<br>Dec 19</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Runtime security, Falco, AppArmor and seccomp</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>SQL mastery and index optimisation</div>
+      <div class="hinge"><b>21</b><span>Dec 20<br>Dec 26</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>NetworkPolicies, admission controllers, OPA / Kyverno</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Design mock drills + Ticket Booking seat locking</div>
+      <div class="hinge"><b>22</b><span>Dec 27<br>Jan 02</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>killer.sh security scenarios, Trivy image scanning</div>
+    </div>
+    <div class="wk is-exam">
+      <div class="cell left"><span class="tag">Track 1</span>Resume and LinkedIn rebuild</div>
+      <div class="hinge"><b>23</b><span>Jan 03<br>Jan 09</span></div>
+      <div class="cell right exam"><span class="tag">Exam window</span><strong>Certified Kubernetes Security Specialist — CKS</strong></div>
+    </div>
+  </div>
+  <div class="milestone">Milestone · CKS</div>
+
+  <!-- MONTH 6 -->
+  <div class="month-head"><span class="month-num">MONTH 06</span><h3>January 2027 — Badge Close-out &amp; Market Entry</h3></div>
+  <p class="month-obj">KCNA and KCSA are the cheapest wins on this page — both multiple-choice, both well within reach after CKS. Without them the Kubestronaut line on your profile isn't true.</p>
+  <div class="spine">
+    <div class="wk is-exam">
+      <div class="cell left"><span class="tag">Track 1</span>Recruiter outreach — VP, Senior Director, Principal Architect specialists</div>
+      <div class="hinge"><b>24</b><span>Jan 10<br>Jan 16</span></div>
+      <div class="cell right exam"><span class="tag">Exam window</span><strong>KCNA</strong> — Kubernetes &amp; Cloud Native Associate</div>
+    </div>
+    <div class="wk is-exam">
+      <div class="cell left"><span class="tag">Track 1</span>Selective applications — AWS ProServe, Google Cloud, fintech scale-ups</div>
+      <div class="hinge"><b>25</b><span>Jan 17<br>Jan 23</span></div>
+      <div class="cell right exam"><span class="tag">Exam window</span><strong>KCSA</strong> — Kubernetes &amp; Cloud Native Security Associate</div>
+    </div>
+    <div class="wk">
+      <div class="cell left"><span class="tag">Track 1</span>Profile relaunch with verified badge, first outbound campaign</div>
+      <div class="hinge"><b>26</b><span>Jan 24<br>Jan 30</span></div>
+      <div class="cell right"><span class="tag">Track 2</span>Consulting entity formalised, positioning statement published</div>
+    </div>
+  </div>
+  <div class="milestone">Milestone · Kubestronaut — all five CNCF certifications active</div>
+
+  <h2>Certification ledger</h2>
+  <table>
+    <thead><tr><th>#</th><th>Certification</th><th>Code</th><th>Format</th><th>Target</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">1</td><td>AWS Solutions Architect – Professional</td><td class="mono"><span class="pill aws">SAP-C02</span></td><td>Scenario MCQ · 180 min</td><td class="mono">W5 · Sep 05</td><td><span class="pill open">Not booked</span></td></tr>
+      <tr><td class="mono">2</td><td>AWS DevOps Engineer – Professional</td><td class="mono"><span class="pill aws">DOP-C02</span></td><td>Scenario MCQ · 180 min</td><td class="mono">W9 · Oct 03</td><td><span class="pill open">Not booked</span></td></tr>
+      <tr><td class="mono">3</td><td>Certified Kubernetes Administrator</td><td class="mono"><span class="pill cncf">CKA</span></td><td>Hands-on · 120 min</td><td class="mono">W14 · Nov 07</td><td><span class="pill open">Not booked</span></td></tr>
+      <tr><td class="mono">4</td><td>Certified Kubernetes Application Developer</td><td class="mono"><span class="pill cncf">CKAD</span></td><td>Hands-on · 120 min</td><td class="mono">W18 · Dec 05</td><td><span class="pill open">Not booked</span></td></tr>
+      <tr><td class="mono">5</td><td>Certified Kubernetes Security Specialist</td><td class="mono"><span class="pill cncf">CKS</span></td><td>Hands-on · 120 min</td><td class="mono">W23 · Jan 09</td><td><span class="pill open">Not booked</span></td></tr>
+      <tr><td class="mono">6</td><td>Kubernetes &amp; Cloud Native Associate</td><td class="mono"><span class="pill cncf">KCNA</span></td><td>MCQ · 90 min</td><td class="mono">W24 · Jan 16</td><td><span class="pill open">Not booked</span></td></tr>
+      <tr><td class="mono">7</td><td>Kubernetes &amp; Cloud Native Security Associate</td><td class="mono"><span class="pill cncf">KCSA</span></td><td>MCQ · 90 min</td><td class="mono">W25 · Jan 23</td><td><span class="pill open">Not booked</span></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13.5px;color:var(--muted);margin-top:12px;">Buy the Linux Foundation <strong>Kubestronaut bundle</strong> rather than five separate registrations — materially cheaper, and each exam includes killer.sh access. CNCF exams also discount heavily around KubeCon and Black Friday.</p>
+
+  <h2>Weekly operating rhythm</h2>
+  <table>
+    <thead><tr><th>Slot</th><th>Duration</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">Weekday early morning</td><td class="mono">1.5 hrs</td><td>Track 2 — video, docs, architecture deep dives. Hard material on a fresh brain.</td></tr>
+      <tr><td class="mono">Weekday late night</td><td class="mono">0.5 hrs</td><td>Track 1 — active recall, flashcards, one LeetCode problem.</td></tr>
+      <tr><td class="mono">Saturday</td><td class="mono">3.5 hrs</td><td>Timed labs and full practice exams. Timed, always.</td></tr>
+      <tr><td class="mono">Sunday</td><td class="mono">3.5 hrs</td><td>Wrong-answer autopsy plus one written system design.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Three rules that decide the outcome</h2>
+  <div class="rules">
+    <div class="rule">
+      <span class="n">01</span>
+      <h4>Single monitor, split screen</h4>
+      <p>Terminal left, kubernetes.io docs right. Never practise on two screens. The exam gives you one, and re-learning the layout under time pressure is exactly where the minutes went last time.</p>
+    </div>
+    <div class="rule">
+      <span class="n">02</span>
+      <h4>Never hand-write YAML</h4>
+      <p>Generate every manifest. Set the aliases at the start of every session, not just before the exam.</p>
+<pre><span class="c"># set these first, every session</span>
+alias k=kubectl
+export do="--dry-run=client -o yaml"
+export now="--force --grace-period=0"
+
+k run nginx --image=nginx $do &gt; pod.yaml
+k create deploy web --image=nginx --replicas=3 $do</pre>
+    </div>
+    <div class="rule">
+      <span class="n">03</span>
+      <h4>Patterns, not problems</h4>
+      <p>The win condition for DSA is naming the pattern inside 60 seconds — sliding window versus two pointers versus heap. Five hundred ungrouped problems without that recognition step produces nothing at interview.</p>
+    </div>
+  </div>
+
+  <h2>Consulting track — parallel, low intensity</h2>
+  <div class="note caution">
+    <h3>Read before signing anything</h3>
+    <p>The original transcript framed an offshore B2B entity as a way to keep outside consulting invisible to your employer. <strong>Structuring for non-detection is not the same as being compliant</strong>, and financial services is the worst possible sector in which to test that distinction.</p>
+    <p>Deutsche Bank almost certainly requires written pre-approval for outside business activity, and that obligation attaches to <em>you</em>, not to whichever entity signs the contract. Routing income through an LLP doesn't dissolve it — it just adds a paper trail that reads badly if it's ever examined.</p>
+    <p>The correct sequence: read your employment contract and the conflicts / outside-business-activity policy, then either get written approval through the proper channel or wait. Advisory-network calls and disclosed side work are often permitted. Undisclosed competing work in your own domain generally isn't. Speak to an employment lawyer in India before you sign, not after.</p>
+    <p>None of this kills the plan. It sequences it: <strong>credentials → higher-paying role or clean exit → consulting entity.</strong> Which is broadly what the 26 weeks above already do.</p>
+  </div>
+
+  <footer>
+    <span>Generated 02 Aug 2026 · Week 1, Day 1 · Book SAP-C02 before you close this file.</span>
+    <button class="print" onclick="window.print()">Print / Save as PDF</button>
+  </footer>
+
+</div>
+
+<script>
+// Checkbox state is in-session only — the markdown file is the durable tracker.
+document.querySelectorAll('.gates input').forEach(function(box){
+  box.addEventListener('change', function(){
+    box.closest('li').style.opacity = box.checked ? '0.5' : '1';
+  });
+});
+</script>
+</body>
+</html>
